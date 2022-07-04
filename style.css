@@ -1,0 +1,267 @@
+body{
+}
+
+
+
+.mainNavbar{
+    z-index: 9;
+    margin-top: 2%;
+}
+
+
+.navbar-brand{
+    padding-right: 2%;
+    margin-left: 10%;
+}
+
+
+
+.navbar-brand img{
+    height: 100px;
+}
+
+.mainNavbar a{
+    color:white;
+    font-size: 20px;
+}
+
+.navbar-nav > li{
+  padding-left:20px;
+  padding-right:20px;
+  border-right: 1px solid white;
+}
+
+
+/** second navbar**/
+.nav2{
+    margin-top: 0;
+}
+
+
+
+
+/** carousel**/
+
+#Home-Carousel{
+  position:absolute;
+  width:100%;
+  top:0;
+}
+
+.carousel-item img{
+    max-height: 800px;
+}
+
+.carousel-caption{
+    bottom: 25%;
+    animation: 4s fade forwards;
+}
+
+.carousel-caption h1{
+    font-size: 5vw;
+}
+
+
+/**Contact**/
+
+.contact_background{
+    background-image: url("contact_us.png");
+    height: 600px;
+    background-size:100% 100%;
+}
+
+
+#contact_title{
+    /*font-size: 60px;*/
+    font-size: 4vw;
+    color: white;
+    text-align: center;
+    margin-top: 7.5%;
+    animation: linear 4s Contact_title_animate;
+}
+
+.contact_info{
+    padding-left: 10%;
+    padding-top: 2%;
+    display: flex;
+    background-color: white;
+
+}
+
+.contact_info h1{
+    font-size: 35px;
+}
+
+#infos_left{
+    float: left;
+}
+
+
+.Email_Form{
+}
+
+#General_info{
+    margin-top: 5%;
+
+}
+
+#General_info th{
+    font-size: 12px;
+}
+#schedule{
+    border-collapse: separate;
+}
+
+#schedule caption{
+    font-size: 30px;
+    caption-side: top;
+    color: black;
+}
+
+
+#infos_right{
+    margin-left: 5%;
+    animation: forwards 3s fade;
+}
+
+#google_map{
+}
+
+.Email_Form label input{
+    width: 450px;
+}
+
+#contact_button{
+    background-color: deepskyblue;
+    color: white;
+    border: none;
+    padding: 5px;
+    width: 200px;
+}
+
+#contact_button:hover{
+    background-color: skyblue;
+    color: black;
+    border:solid 1px blue
+}
+
+#l1{
+    animation: 1s linear comeFromLeft;
+}
+
+#l2{
+    animation: 1.5s linear comeFromLeft;
+}
+
+#l3{
+    animation: 2s linear comeFromLeft;
+}
+
+#l4{
+    animation: 2.5s linear comeFromLeft;
+}
+
+#l5{
+    animation: 3s linear comeFromLeft;
+}
+
+
+
+@media screen and (max-width: 1300px){
+    .contact_info{
+        display: block;
+        padding-left: 5%;
+    }
+
+    .contact_background{
+        height: 400px;
+    }
+    #contact_title{
+        /*font-size: 40px;*/
+    }
+    #infos_right{
+        margin-left: 0;
+    }
+
+    #infos_left{
+        padding-right: 2%;
+    }
+
+    #google_map{
+        width:450px;
+    }
+}
+
+/**A propos**/
+
+.team_background{
+    background-image: url("team_pic.png");
+    height: 500px;
+    background-size:100% 100%;
+}
+
+#team_title{
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    margin-top: 7.5%;
+}
+
+
+#about_nav{
+    float:left;
+    width: 80%;
+    border-bottom: 1px solid grey ;
+    margin-left: 5%;
+}
+
+#team_side_nav{
+    list-style-type: none;
+    display: flex;
+    margin-top: 2%;
+}
+
+#team_side_nav li{
+    font-size: 20px;
+    padding-right: 5%;
+}
+
+#about_content{
+    padding-left: 20%;
+    padding-right: 10%;
+    margin-top: 10%;
+}
+
+#about_content h1{
+    font-size: 25px;
+    padding-bottom: 2%;
+}
+
+
+/**Animation**/
+
+@keyframes comeFromLeft {
+      0% {
+      transform: translate(-100%);   }
+      100% {
+        transform: translate(0);   }
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes Contact_title_animate {
+    0%{
+        font-size: 30vw;
+    }
+    100%{
+        font-size: 4vw;
+    }
+
+}
