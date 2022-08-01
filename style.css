@@ -1,11 +1,14 @@
+
 body{
+    background: white;
 }
 
 
 
 .mainNavbar{
     z-index: 9;
-    margin-top: 2%;
+    margin-top: 5%;
+    animation: fade 4s forwards;
 }
 
 
@@ -17,12 +20,12 @@ body{
 
 
 .navbar-brand img{
-    height: 100px;
+    height: 150px;
 }
 
 .mainNavbar a{
     color:white;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .navbar-nav > li{
@@ -31,35 +34,344 @@ body{
   border-right: 1px solid white;
 }
 
-
-/** second navbar**/
-.nav2{
-    margin-top: 0;
+.navbar-nav{
+    width: 100%;
 }
 
+.navbar-nav li{
+    width:20% ;
+    text-align: center;
+}
+
+.navbar-nav li:nth-child(3){
+    width: 40%;
+    border-right: 0;
+}
+
+.navbar-nav li:nth-child(1){
+    height: 50px;
+}
+
+.navbar-nav li:nth-child(2){
+    height: 50px;
+}
+
+.navbar-nav li:nth-child(4){
+    height: 50px;
+    border-left: 1px solid white;
+}
+
+.navbar-nav li:nth-child(5){
+    height: 50px;
+}
+
+
+
+
+.sticky{
+    position: sticky;
+    /*background-image: linear-gradient(to bottom, orange,goldenrod);*/
+    background-color: skyblue;
+    top: 0;
+    margin-top: 0;
+    /*border-radius: 0 0 100px 100px;*/
+    border-bottom: 2px solid grey;
+}
+.sticky a{
+    color: white;
+}
+
+.sticky img{
+    height: 80px;
+}
 
 
 
 /** carousel**/
 
 #Home-Carousel{
-  position:absolute;
   width:100%;
-  top:0;
+  top: 0;
+  position: absolute;
 }
 
 .carousel-item img{
     max-height: 800px;
 }
+.carousel-caption h5{
+    display: none;
+    margin-bottom: 15%;
+    color: white;
+    font-size: 7vw;
+    font-family:Palatino ;
+}
 
-.carousel-caption{
-    bottom: 25%;
+
+.carousel-item{
+    z-index: -2;
+}
+
+
+.title{
+    color: white;
+    font-size: 8vw;
+    margin-left: 15%;
+    top: 45%;
+    font-family:Palatino ;
+    z-index: -1;
+    position: fixed;
+    text-align: center;
+}
+
+.header_description {
+    display: none;
+    font-size: 50px;
     animation: 4s fade forwards;
+    color: goldenrod;
 }
 
-.carousel-caption h1{
-    font-size: 5vw;
+@media screen and (max-width: 1000px) {
+    .title{
+        display: none;
+    }
+    .header_description{
+        display: block;
+    }
+    .Latest_Merch{
+    }
+    .Description{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .carousel-caption h5{
+        display: block;
+    }
+
+
 }
+
+@keyframes titleAnimate {
+    0%{
+        font-size: 1px;
+    }
+
+    50% {
+        font-size: 100px;
+    }
+    100% {
+        font-size: 50px;
+    }
+}
+
+.Description{
+    color: black;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /**backdrop-filter: blur(1.5px);**/
+    -webkit-backdrop-filter: blur(6.5px);
+    /**border-right: 2px solid goldenrod;
+    border-left: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;**/
+    padding-left: 10%;
+    padding-right: 10%;
+    z-index: -9;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 72%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@keyframes get_bigger {
+    0%{
+        font-size: 0px;
+    }
+    100%{
+        font-size: 25px;
+    }
+
+}
+
+.get_bigger{
+    animation: get_bigger 2s forwards;
+}
+
+@keyframes MainTitle  {
+    0%{
+        color: black;
+    }
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        color: goldenrod;
+        opacity: 1;
+    }
+
+}
+
+.MainTitle{
+    animation: MainTitle 2s forwards;
+    position: absolute;
+    top:110%;
+}
+
+
+
+
+
+.Latest_Merch{
+    margin-top: 20%;
+}
+
+.Latest_Merch_title{
+    font-size: 4vw;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    color: rgb(23, 39, 62);
+    margin-left: 2%;
+    border-right: .15em solid rgb(23, 39, 62);
+    /*animation:
+    typing 3.5s steps(40,end),
+    blink-caret .75s step-end infinite;*/
+    /*background-color: blue;*/
+    width: max-content;
+}
+
+.typing{
+    animation:
+    typing 3.5s steps(50,end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 40% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(23, 39, 62); }
+}
+
+.Latest_Merch_list{
+    list-style-type: none;
+    margin-top: 5%;
+    display: flex;
+    padding-right: 5%;
+    margin-left: 2%;
+}
+
+.Latest_Merch_container{
+    text-align: center;
+    width: 30%;
+    margin-left: 5%;
+    color: black;
+    padding-top: 1%;
+    background: rgba( 248, 248, 248, 0.05 );
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transform: translateX(-400%);
+}
+
+.Latest_Merch_container_animate{
+    animation: Latest_Merch_from_left 4s forwards;
+}
+
+.Latest_Merch_list li:nth-child(1){
+    animation-delay: 4s;
+}
+.Latest_Merch_list li:nth-child(2){
+    animation-delay: 2s;
+}
+
+@keyframes Latest_Merch_from_left {
+    0%{
+        transform: translateX(-400%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+
+}
+
+.Latest_Merch_container img{
+    height: 250px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    mix-blend-mode: multiply;
+    padding-bottom: 2%;
+}
+
+.See_more_container{
+    margin-top: 5%;
+    padding-bottom: 5%;/*to remove*/
+}
+
+
+.See_more{
+    margin-left: 40%;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: white;
+    color: goldenrod;
+    border: solid 2px goldenrod;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+    padding-left: 2%;
+    border-radius: 30px;
+}
+
+
+.See_more:hover{
+    background-color: goldenrod;
+    color: black;
+}
+
+.Latest_Merch_name{
+    padding-bottom: 5%;
+    font-size: 24px;
+    color: goldenrod;
+}
+
+.Buy_now_container{
+    margin-top: 2%;
+    padding-bottom: 5%;
+}
+
+
+.Buy_now{
+    text-decoration: none;
+    background-color: white;
+    color: goldenrod;
+    border: solid 2px goldenrod;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+    padding-left: 2%;
+    border-radius: 30px;
+}
+
+
+.Buy_now:hover{
+    background-color: goldenrod;
+    color: black;
+}
+
+
+
+
+
+
 
 
 /**Contact**/
@@ -196,46 +508,187 @@ body{
 
 .team_background{
     background-image: url("team_pic.png");
-    height: 500px;
+    height: 600px;
     background-size:100% 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 #team_title{
     font-size: 60px;
     color: white;
     text-align: center;
-    margin-top: 7.5%;
+    margin-top: 20%;
 }
 
 
+.team_main_nav a{
+    color: black;
+}
+
+.team_main_nav li{
+    border-right: 1px solid black;
+}
+
 #about_nav{
-    float:left;
-    width: 80%;
-    border-bottom: 1px solid grey ;
-    margin-left: 5%;
+    width: 100%;
+    margin-top: 32%;
 }
 
 #team_side_nav{
     list-style-type: none;
     display: flex;
-    margin-top: 2%;
+    padding-left: 0;
+    margin-left: 15%;
 }
 
 #team_side_nav li{
-    font-size: 20px;
+    font-size: 25px;
+    text-align: center;
+    border-bottom: 1px solid grey ;
+    padding-left: 5%;
     padding-right: 5%;
+    padding-bottom: 2%;
+    cursor: pointer;
+
+}
+
+#team_side_nav li:first-child{
+    margin-left: 0;
+}
+
+
+
+#team_side_nav li:hover{
+    border-bottom: goldenrod 1px solid;
+    color: goldenrod;
 }
 
 #about_content{
     padding-left: 20%;
     padding-right: 10%;
-    margin-top: 10%;
+    margin-top: 5%;
+    font-size: 25px;
 }
 
 #about_content h1{
-    font-size: 25px;
+    font-size: 45px;
     padding-bottom: 2%;
+    color: rgb(23, 39, 62);
 }
+
+#Mission{
+    padding-bottom: 5%;
+}
+
+#Objectifs {
+    padding-bottom: 5%;
+}
+
+#Exploits{
+    padding-bottom: 5%;
+}
+
+#Member_list {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#Member_list li {
+    margin-left: 5%;
+    text-align: center;
+    opacity: 0;
+}
+
+#Member_list li img {
+    height: 400px;
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+#Member_list li p1 {
+    color: black;
+    font-size: 20px;
+}
+
+#Member_list li:first-child {
+    /*animation: fade forwards 4s;*/
+    /*animation-delay: 1s;*/
+}
+
+#Member_list li:nth-child(2) {
+    /*animation: fade forwards 4s;*/
+    animation-delay: 1s;
+}
+
+#Member_list li:nth-child(3) {
+    /*animation: fade forwards 4s;*/
+    animation-delay: 2s;
+}
+
+
+#Member_title {
+    text-align: center;
+    color: goldenrod;
+    padding-bottom: 5%;
+    font-size: 5vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .team_background{
+        height: 400px;
+    }
+    #about_nav{
+        margin-top: 40%;
+    }
+
+    #team_side_nav{
+        margin-left: 2%;
+    }
+
+    #about_content{
+        padding-left: 2%;
+    }
+
+    #Member_list {
+        display: grid;
+        margin-left: 0;
+    }
+    #Member_list li {
+        text-align: center;
+        margin-left: 0;
+        padding-bottom: 5%;
+        padding-right: 10%;
+    }
+    #Member_list li:first-child {
+        grid-row: 1;
+    }
+    #Member_list li:nth-child(2) {
+        grid-row: 1;
+    }
+    #Member_list li:nth-child(3) {
+        grid-row: 1;
+    }
+    #Member_list li img {
+        width: 250px;
+        height: 400px;
+    }
+}
+
+/*#Member_list li:first-child img:hover {
+  box-shadow: blue 0px 0px 22px 4px;
+}
+
+#Member_list li:nth-child(2) img:hover {
+    box-shadow: goldenrod 0px 0px 22px 4px;
+}
+
+#Member_list li:nth-child(3) img:hover {
+  box-shadow: red 0px 0px 22px 4px;
+}*/
 
 
 /**Animation**/
@@ -254,6 +707,10 @@ body{
     100%{
         opacity: 100%;
     }
+}
+
+.fade{
+    animation: fade forwards 4s;
 }
 
 @keyframes Contact_title_animate {
