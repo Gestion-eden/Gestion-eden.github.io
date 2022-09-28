@@ -7,11 +7,12 @@
                 integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <!-- Js-->
         <script type="module"  src=""></script>
-        <!--SCSS -->
+        <!--CSS -->
         <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <nav class="navbar navbar-expand-xl mainNavbar">
+        <nav class="navbar navbar-expand-md  mainNavbar">
           <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
                   data-bs-target="#main-navigation" aria-controls="navbarToggleExternalContent"
                   aria-expanded="false" aria-label="Toggle navigation">
@@ -31,8 +32,18 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="immeuble.html">Nos services</a>
+                    <div class="dropdown">
+                        <button class="dropbtn" onclick="myFunction()"> Nos Services
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content" id="myDropdown">
+                          <a href="">Courtage immobilière</a>
+                          <a href="">Gestion immobilière</a>
+                          <a href="">Construction et rénovation</a>
+                        </div>
+                    </div>
                 </li>
+
                 <!--<li class="nav-item">
                     <a class="nav-link" href="commerce.html">Commerces</a>
                 </li>-->
@@ -85,52 +96,66 @@
             </button>
         </div>
 
-        <div class="Description">
-            <h1 class="header_description">Présentation</h1>
-            <p1 class="Description_text">
+        <div class="Keyword_container">
+            <!--<h1 class="header_description">GESTION EDEN</h1>-->
+            <!--<p1 class="Description_text">
                 We are a team established in Montreal, Canada. The founding
                 members are Amed, Shugufa and Jamal. Our goal
                 is to deliver the funniest content and provide for you stylish merch
-            </p1>
-        </div>
-
-        <div class="Latest_Merch">
-                <h1 class="Latest_Merch_title">Nos derniers exploits</h1>
-                <ul class="Latest_Merch_list">
-                    <li class="Latest_Merch_container">
+            </p1>-->
+            <ul class="Keyword_list">
+                    <li class="Keyword_element">
                         <img src="slide_1.jpg"/>
-                        <p1 class="Latest_Merch_name">100 immeubles résidentielles<br></p1>
-                        <p2 class="Latest_Merch_description">
-                            On fait la gestion de plus d'une centaine d'immeubles
-                        </p2>
-                        <div class="Buy_now_container">
-                            <a class="Buy_now" href="Merch.html">NOS RÉSIDENCES</a>
-                        </div>
+                        <p1 class="Keyword_name">Mot clé 1<br></p1>
                     </li>
-                    <li class="Latest_Merch_container">
+                    <li class="Keyword_element">
                         <img src="slide_2.jpg"/>
-                        <p1 class="Latest_Merch_name">Exploit 2<br></p1>
-                        <p2 class="Latest_Merch_description">
-                            Description
-                        </p2>
-                        <div class="Buy_now_container">
-                            <a class="Buy_now" href="Merch.html">VOIR</a>
-                        </div>
+                        <p1 class="Keyword_name">Mot clé 2<br></p1>
                     </li>
-                    <li class="Latest_Merch_container">
+                    <li class="Keyword_element">
                         <img src="slide_3.jpg"/>
-                        <p1 class="Latest_Merch_name">Exploit 3<br></p1>
-                        <p2 class="Latest_Merch_description">
-                            Description<br>
-                        </p2>
-                        <div class="Buy_now_container">
-                            <a class="Buy_now" href="Merch.html">NOS COMMERCES</a>
-                        </div>
+                        <p1 class="Keyword_name">Mot clé 3<br></p1>
                     </li>
                 </ul>
-                <div class="See_more_container">
-                    <a class="See_more" href="team.html">EN SAVOIR PLUS</a>
-                </div>
+        </div>
+
+        <div class="Organisation_container">
+            <h1 class="Org_title">Notre organisation</h1>
+            <canvas id="schema_org">
+            <script src="schema.js"></script>
+
+            </canvas>
+        </div>
+        <div class="See_more_container">
+            <a class="See_more" href="team.html">EN SAVOIR PLUS</a>
+        </div>
+
+        <h1>Envoyer une soumisson</h1><br>
+
+        <div class="Soumission_email">
+            <div class="Soumission_description">
+                <p1>Image</p1>
+
+            </div>
+            <div class="Soumission_Form">
+            <p1>Notre équipe vous répondra dans le plus bref délai(A modifier)</p1><br/><br/>
+                <form action="/contact"  method="POST">
+                    <input id="csrf_token" name="csrf_token" type="hidden" value="ImEzMWEyMmZmZTc4ZTRmY2QwM2JlNzc2ODE4MDcyN2E1NjQ1YjA1MDQi.Yqdp_w.owo2Vp3U1tktyk_MFoISTNK32K8">
+                    <label class="contact_form" >Nom complet<br> <input type="text" name="Name"/></label><br/><br/>
+                    <label class="contact_form" >Courriel<br> <input  type="email" name="Email"/></label><br/><br/>
+                    <label class="contact_form" >Numéro de téléphone<br> <input id="tel_input" type="tel" name="Telephone"/></label><br/><br/>
+                    <label class="contact_form" >Sujet<br> <input  type="text" name="Name"/></label><br/><br/>
+                    <label class="contact_form" > Message<br> <textarea name="Message" rows="4" cols="50" maxlength="1000"></textarea></label><br/><br/>
+                    <button id="contact_button"  onclick="sendData()" type="submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+        <div class="footer">
+
         </div>
 
 
@@ -145,5 +170,22 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
                 integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
         <script type="module"  src="Scroll.js"></script>
+        <script>
+            /* When the user clicks on the button,
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("myDropdown").classList.add("show");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(e) {
+              if (!e.target.matches('.dropbtn')) {
+              var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                  myDropdown.classList.remove('show');
+                }
+              }
+            }
+        </script>
     </body>
 </html>

@@ -15,12 +15,13 @@ body{
 .navbar-brand{
     padding-right: 2%;
     margin-left: 10%;
+    padding-top: 25%;
 }
 
 
 
 .navbar-brand img{
-    height: 150px;
+    height: 225px;
 }
 
 .mainNavbar a{
@@ -67,14 +68,66 @@ body{
 
 
 
+/*Dropdown services*/
 
-.sticky{
+.dropdown {
+    float: left;
+}
+
+.dropbtn {
+  cursor: pointer;
+  font-size: 25px;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: inherit;
+  padding: 14px 16px;
+  background: none;
+  margin: 0;
+
+}
+
+.dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 4;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 16px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border: 4px solid yellowgreen;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {
+  background-color: mediumvioletred;
+}
+
+.show {
+  display: block;
+}
+
+
+
+/*.sticky{
     position: sticky;
-    /*background-image: linear-gradient(to bottom, orange,goldenrod);*/
+    /*background-image: linear-gradient(to bottom, orange,goldenrod);
     background-color: skyblue;
     top: 0;
     margin-top: 0;
-    /*border-radius: 0 0 100px 100px;*/
+    /*border-radius: 0 0 100px 100px;
     border-bottom: 2px solid grey;
 }
 .sticky a{
@@ -83,7 +136,7 @@ body{
 
 .sticky img{
     height: 80px;
-}
+}*/
 
 
 
@@ -96,7 +149,8 @@ body{
 }
 
 .carousel-item img{
-    max-height: 800px;
+    /*max-height: 800px;*/
+    height: 800px;
 }
 .carousel-caption h5{
     display: none;
@@ -130,26 +184,6 @@ body{
     color: goldenrod;
 }
 
-@media screen and (max-width: 1000px) {
-    .title{
-        display: none;
-    }
-    .header_description{
-        display: block;
-    }
-    .Latest_Merch{
-    }
-    .Description{
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .carousel-caption h5{
-        display: block;
-    }
-
-
-}
 
 @keyframes titleAnimate {
     0%{
@@ -164,7 +198,7 @@ body{
     }
 }
 
-.Description{
+.Keyword_container{
     color: black;
     background: rgba(255, 255, 255, 0);
     border-radius: 16px;
@@ -174,29 +208,14 @@ body{
     /**border-right: 2px solid goldenrod;
     border-left: 2px solid goldenrod;
     border-bottom: 2px solid goldenrod;**/
-    padding-left: 10%;
-    padding-right: 10%;
     z-index: -9;
     text-align: center;
     font-size: 25px;
     margin-top: 72%;
-    margin-left: 10%;
-    margin-right: 10%;
+    /*margin-left: 10%;
+    margin-right: 10%;*/
 }
 
-@keyframes get_bigger {
-    0%{
-        font-size: 0px;
-    }
-    100%{
-        font-size: 25px;
-    }
-
-}
-
-.get_bigger{
-    animation: get_bigger 2s forwards;
-}
 
 @keyframes MainTitle  {
     0%{
@@ -223,11 +242,11 @@ body{
 
 
 
-.Latest_Merch{
-    margin-top: 20%;
+.Organisation_container{
+    margin-top: 10%;
 }
 
-.Latest_Merch_title{
+.Org_title{
     font-size: 4vw;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -249,7 +268,7 @@ body{
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 40% }
+  to { width: 35% }
 }
 
 /* The typewriter cursor effect */
@@ -258,7 +277,7 @@ body{
   50% { border-color: rgb(23, 39, 62); }
 }
 
-.Latest_Merch_list{
+.Keyword_list{
     list-style-type: none;
     margin-top: 5%;
     display: flex;
@@ -266,7 +285,7 @@ body{
     margin-left: 2%;
 }
 
-.Latest_Merch_container{
+.Keyword_element{
     text-align: center;
     width: 30%;
     margin-left: 5%;
@@ -281,18 +300,18 @@ body{
     transform: translateX(-400%);
 }
 
-.Latest_Merch_container_animate{
-    animation: Latest_Merch_from_left 4s forwards;
+.Keyword_element_animate{
+    animation: Keyword_from_left 4s forwards;
 }
 
-.Latest_Merch_list li:nth-child(1){
+.Keyword_list li:nth-child(1){
     animation-delay: 4s;
 }
-.Latest_Merch_list li:nth-child(2){
+.Keyword_list li:nth-child(2){
     animation-delay: 2s;
 }
 
-@keyframes Latest_Merch_from_left {
+@keyframes Keyword_from_left {
     0%{
         transform: translateX(-400%);
     }
@@ -302,7 +321,7 @@ body{
 
 }
 
-.Latest_Merch_container img{
+.Keyword_element img{
     height: 250px;
     width: 200px;
     display: block;
@@ -337,9 +356,9 @@ body{
     color: black;
 }
 
-.Latest_Merch_name{
+.Keyword_name{
     padding-bottom: 5%;
-    font-size: 24px;
+    font-size: 30px;
     color: goldenrod;
 }
 
@@ -369,8 +388,78 @@ body{
 
 
 
+@media screen and (max-width: 1000px) {
+    .title{
+        display: none;
+    }
+    .header_description{
+        display: block;
+    }
+    .Keyword{
+    }
+    .Description{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .carousel-caption h5{
+        display: block;
+    }
+
+    .carousel-item img{
+        height: 600px;
+    }
+
+    .Keyword_container{
+        margin-top: 50%;
+    }
 
 
+}
+
+.Organisation_container{
+    
+}
+
+#schema_org{
+    /*border: 1px solid black;*/
+    margin-left: 10%;
+    width: 80%;
+    height: 500px;
+    margin-top: 5%;
+    background-image:url("canvas_background.gif");
+    background-size: 100% 100%;
+
+}
+
+/**Soumission**/
+.Soumission_email{
+    display: flex;
+    padding-bottom: 5%;
+}
+
+.Soumission_description{
+    float: left;
+    border: 2px solid red;
+    width: 40%;
+    margin-left: 10%;
+}
+
+
+
+.Soumission_Form{
+    margin-left: 10%;
+}
+
+
+.Soumission_Form label input{
+    width: 450px;
+}
+
+.footer{
+    height: 300px;
+    background-color: linen;
+}
 
 
 
@@ -418,7 +507,7 @@ body{
 }
 
 #General_info th{
-    font-size: 12px;
+    font-size: 20px;
 }
 #schedule{
     border-collapse: separate;
