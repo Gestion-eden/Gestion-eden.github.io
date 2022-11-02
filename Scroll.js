@@ -49,3 +49,42 @@ const observer2 = new IntersectionObserver(entries => {
 });
 
 observer2.observe(document.querySelector('.Organisation_container'));
+
+
+const observer3 = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const Soumission_email = entry.target.querySelector('.Soumission_email');
+
+    const soumission_item_1 = entry.target.querySelector('.soumission_item:nth-child(1)');
+    const soumission_item_2 = entry.target.querySelector('.soumission_item:nth-child(2)');
+    const soumission_item_3 = entry.target.querySelector('.soumission_item:nth-child(3)');
+    const soumission_item_4 = entry.target.querySelector('.soumission_item:nth-child(4)');
+    const soumission_item_5 = entry.target.querySelector('.soumission_item:nth-child(5)');
+    const soumission_item_6 = entry.target.querySelector('.soumission_item:nth-child(6)');
+    const soumission_item_7 = entry.target.querySelector('.soumission_item:nth-child(7)');
+
+    if (entry.isIntersecting) {
+      console.log("yes");
+      soumission_item_1.classList.add('animate_perspective_and_rotate');
+      soumission_item_2.classList.add('animate_perspective_and_rotate');
+      soumission_item_3.classList.add('animate_perspective_and_rotate');
+      soumission_item_4.classList.add('animate_perspective_and_rotate');
+      soumission_item_5.classList.add('animate_perspective_and_rotate');
+      soumission_item_6.classList.add('animate_perspective_and_rotate');
+      /*soumission_item_7.classList.add('animate_perspective_and_rotate');*/
+      //console.log("yes");
+	  return; // if we added the class, exit the function
+    }
+    //console.log("no more");
+    // We're not intersecting, so remove the class!
+    soumission_item_1.classList.remove('animate_perspective_and_rotate');
+    soumission_item_2.classList.remove('animate_perspective_and_rotate');
+    soumission_item_3.classList.remove('animate_perspective_and_rotate');
+    soumission_item_4.classList.remove('animate_perspective_and_rotate');
+    soumission_item_5.classList.remove('animate_perspective_and_rotate');
+    soumission_item_6.classList.remove('animate_perspective_and_rotate');
+    //soumission_item_7.classList.remove('animate_perspective_and_rotate');
+  });
+});
+
+observer3.observe(document.querySelector('.Soumission_email'));

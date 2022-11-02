@@ -277,6 +277,55 @@ body{
   50% { border-color: rgb(23, 39, 62); }
 }
 
+.Org_grid{
+    margin-left: 10%;
+    width: 80%;
+    display: grid;
+    margin-top: 5%;
+    row-gap: 50px;
+}
+
+#org_el_1{
+    height: 200px;
+    width: 200px;
+    background-color: grey;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border-radius: 25px;
+}
+
+#org_el_2{
+    height: 200px;
+    width: 200px;
+    background-color: deepskyblue;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-top: 100px;
+    border-radius: 25px;
+}
+
+#org_el_3{
+    height: 200px;
+    width: 200px;
+    background-color: mediumvioletred;
+    grid-column-start: 0;
+    grid-column-end: 1;
+    border-radius: 25px;
+}
+
+#org_el_4{
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    border-radius: 25px;
+}
+
+
+
+
+
 .Keyword_list{
     list-style-type: none;
     margin-top: 5%;
@@ -387,6 +436,274 @@ body{
 }
 
 
+.Organisation_container{
+    
+}
+
+#schema_org{
+    /*border: 1px solid black;*/
+    margin-left: 10%;
+    width: 80%;
+    height: 500px;
+    margin-top: 5%;
+    background-image:url("canvas_background.gif");
+    background-size: 100% 100%;
+
+}
+
+/**Soumission**/
+.Soumission_email{
+    display: flex;
+    padding-bottom: 5%;
+}
+
+.Soumission_description{
+    width: 45%;
+}
+
+.soumission_gallery{
+    display: grid;
+    column-count: 3;
+    list-style-type: none;
+    row-gap: 20px ;
+    grid-column-gap: 5px;
+}
+
+
+.soumission_item img{
+    width: 200px;
+    height: 250px;
+}
+
+.soumission_item:nth-child(1){
+    grid-row-start: 0;
+    grid-row-end:1 ;
+    grid-column-start: 0;
+    grid-column-end: 1;
+    opacity: 0;
+}
+.soumission_item:nth-child(2){
+    grid-row-start: 0;
+    grid-row-end:1 ;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.soumission_item:nth-child(3){
+    grid-row-start: 0;
+    grid-row-end:1 ;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    animation-delay: 2s;
+    opacity: 0;
+}
+.soumission_item:nth-child(4){
+    grid-row-start: 1;
+    grid-row-end:2;
+    grid-column-start: 0;
+    grid-column-end: 1;
+    animation-delay: 3s;
+    opacity: 0;
+}
+.soumission_item:nth-child(5){
+    grid-row-start: 1;
+    grid-row-end:2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    animation-delay: 4s;
+    opacity: 0;
+
+}
+.soumission_item:nth-child(6){
+    grid-row-start: 1;
+    grid-row-end:2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    animation-delay: 5s;
+    opacity: 0;
+}
+
+.animate_perspective_and_rotate{
+    animation: 4s perspective_and_rotate forwards ;
+}
+
+@keyframes perspective_and_rotate {
+    0%{
+        transform:perspective(1000px) rotateX(45deg);
+        opacity: 0;
+    }
+    100%{
+        transform:perspective(1000px) rotateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+.Soumission_Form{
+    margin-left: 10%;
+    float:left;
+}
+
+
+
+.Soumission_Form label input{
+    width: 450px;
+}
+
+
+.credit {
+  background-color: linen;
+  color: black;
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family: "Playfair Display", serif;
+  display: flex; }
+
+.logo_img img{
+    height: 175px;
+    width: 175px;
+}
+
+
+.credit_col_1 {
+    list-style-type: none;
+    width: 45%;
+    float: left;
+}
+
+.credit_col_2 {
+    margin-top: 10%;
+    float: right;
+    list-style-type: none;
+}
+
+.credit_logo {
+    list-style-type: none;
+    display: flex;
+}
+
+#Book_your_place {
+    border-bottom: 1px solid grey;
+    font-size: 30px;
+}
+
+#Barber_credit {
+    font-size: 18px;
+    color: #9c9c9c;
+}
+
+.credit_col_1 li {
+    padding-bottom: 3%;
+    font-size: 40px;
+    padding-right: 10%;
+}
+
+#second_li {
+    padding-bottom: 2%;
+}
+
+.credit_col_3 {
+    margin-top: 10%;
+    float: right;
+    list-style-type: none;
+    margin-left: 5%;
+}
+
+.credit_col_3 h1, .credit_col_2 h1 {
+    border-bottom: solid 1px grey;
+    color: black;
+}
+
+.credit_col_2 li, .credit_col_3 li {
+    padding-bottom: 5%;
+    color: black;
+}
+
+.Credit_Barber {
+    color: goldenrod;
+    font-size: 20px;
+    border-radius: 30px;
+    border: solid 1px goldenrod;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-decoration: none;
+}
+
+.Credit_Barber:hover {
+    background-color: goldenrod;
+    color: black;
+}
+
+.credit_logo li a {
+    color: black;
+}
+
+.credit_logo li a:hover {
+    color: goldenrod;
+}
+
+.copyright {
+    background-color:linen;
+    color: black;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.credit_col_2 li a {
+    text-decoration: none;
+    color: black;
+}
+
+.credit_col_2 li a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 775px) {
+    .credit {
+        display: block;
+    }
+    .credit_col_1 {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .credit_col_1 li {
+        padding-right: 0;
+    }
+    .credit_logo li {
+        padding-right: 10%;
+    }
+    #Book_your_place {
+        font-size: 20px;
+    }
+    .credit_logo {
+        margin-left: 10%;
+    }
+    .credit_col_2 {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .credit_col_3 {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+    .credit {
+        padding-bottom: 10%;
+    }
+    .copyright {
+        text-align: center;
+    }
+}
+
 
 @media screen and (max-width: 1000px) {
     .title{
@@ -414,71 +731,33 @@ body{
         margin-top: 50%;
     }
 
+    .soumission_item:nth-child(6){
+        display: none;
+    }
 
+    .soumission_item:nth-child(3){
+        display: none;
+    }
 }
-
-.Organisation_container{
-    
-}
-
-#schema_org{
-    /*border: 1px solid black;*/
-    margin-left: 10%;
-    width: 80%;
-    height: 500px;
-    margin-top: 5%;
-    background-image:url("canvas_background.gif");
-    background-size: 100% 100%;
-
-}
-
-/**Soumission**/
-.Soumission_email{
-    display: flex;
-    padding-bottom: 5%;
-}
-
-.Soumission_description{
-    float: left;
-    border: 2px solid red;
-    width: 40%;
-    margin-left: 10%;
-}
-
-
-
-.Soumission_Form{
-    margin-left: 10%;
-}
-
-
-.Soumission_Form label input{
-    width: 450px;
-}
-
-.footer{
-    height: 300px;
-    background-color: linen;
-}
-
 
 
 /**Contact**/
 
 .contact_background{
-    background-image: url("contact_us.png");
-    height: 600px;
-    background-size:100% 100%;
+    /**background-image: url("contact_us.png");**/
+
+    /**background-size:100% 100%;**/
+    background-color: lightskyblue;
 }
 
 
 #contact_title{
     /*font-size: 60px;*/
-    font-size: 4vw;
+    font-size: 5vw;
     color: white;
-    text-align: center;
-    margin-top: 7.5%;
-    animation: linear 4s Contact_title_animate;
+    /**text-align: center;**/
+    /**margin-top: 7.5%;**/
+    /*animation: linear 4s Contact_title_animate;*/
 }
 
 .contact_info{
@@ -572,10 +851,6 @@ body{
     .contact_info{
         display: block;
         padding-left: 5%;
-    }
-
-    .contact_background{
-        height: 400px;
     }
     #contact_title{
         /*font-size: 40px;*/

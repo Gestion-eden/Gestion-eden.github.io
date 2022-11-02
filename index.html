@@ -68,22 +68,34 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100 slide_img" src="slide_1.jpg"  alt="Second slide">
+                    <img class="d-block w-100 slide_img" src="slide_1.jpg"  alt="First slide">
                     <div class="carousel-caption">
                         <h5>Gestion Immobilière<br> Eden </h5>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100 slide_img" src="slide_2.jpg"  alt="Second slide">
+                    <div class="carousel-caption">
+                        <h5>Gestion Immobilière<br> Eden </h5>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100 slide_img" src="slide_3.jpg"  alt="Third slide">
+                    <div class="carousel-caption">
+                        <h5>Gestion Immobilière<br> Eden </h5>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100 slide_img" src="slide_4.jpg"  alt="Third slide">
+                    <img class="d-block w-100 slide_img" src="slide_4.jpg"  alt="Fourth slide">
+                    <div class="carousel-caption">
+                        <h5>Gestion Immobilière<br> Eden </h5>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100 slide_img" src="slide_5.jpeg"  alt="Third slide">
+                    <img class="d-block w-100 slide_img" src="slide_5.jpeg"  alt="Fifth slide">
+                    <div class="carousel-caption">
+                        <h5>Gestion Immobilière<br> Eden </h5>
+                    </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#Home-Carousel" data-bs-slide="prev" data-mdb-ripple-color="gold">
@@ -121,10 +133,29 @@
 
         <div class="Organisation_container">
             <h1 class="Org_title">Notre organisation</h1>
-            <canvas id="schema_org">
+            <div class="Org_grid">
+                <div id="org_el_1">
+
+                </div>
+                <div id="org_el_2">
+
+                </div>
+                <div id="org_el_3">
+
+                </div>
+                <div id="org_el_4">
+
+                </div>
+            </div>
+
+
+
+
+
+            <!--<canvas id="schema_org">
             <script src="schema.js"></script>
 
-            </canvas>
+            </canvas>-->
         </div>
         <div class="See_more_container">
             <a class="See_more" href="team.html">EN SAVOIR PLUS</a>
@@ -133,10 +164,6 @@
         <h1>Envoyer une soumisson</h1><br>
 
         <div class="Soumission_email">
-            <div class="Soumission_description">
-                <p1>Image</p1>
-
-            </div>
             <div class="Soumission_Form">
             <p1>Notre équipe vous répondra dans le plus bref délai(A modifier)</p1><br/><br/>
                 <form action="/contact"  method="POST">
@@ -144,18 +171,106 @@
                     <label class="contact_form" >Nom complet<br> <input type="text" name="Name"/></label><br/><br/>
                     <label class="contact_form" >Courriel<br> <input  type="email" name="Email"/></label><br/><br/>
                     <label class="contact_form" >Numéro de téléphone<br> <input id="tel_input" type="tel" name="Telephone"/></label><br/><br/>
+                    <label class="contact_form">Nombre de porte à gérer<br><input id="porte_inpute" type="number" min="0" name="Porte"/></label><br/><br/></label>
                     <label class="contact_form" >Sujet<br> <input  type="text" name="Name"/></label><br/><br/>
                     <label class="contact_form" > Message<br> <textarea name="Message" rows="4" cols="50" maxlength="1000"></textarea></label><br/><br/>
                     <button id="contact_button"  onclick="sendData()" type="submit">Envoyer</button>
                 </form>
+            </div>
+            <div class="Soumission_description">
+                <ul class="soumission_gallery">
+                    <li class="soumission_item">
+                        <img src="luxury-home-g99dad82d0_1920.jpg">
+                    </li>
+                    <li class="soumission_item">
+                        <img src="luxury-home-g99dad82d0_1920.jpg">
+                    </li>
+                    <li class="soumission_item">
+                        <img src="luxury-home-g99dad82d0_1920.jpg">
+                    </li>
+                    <li class="soumission_item">
+                        <img src="luxury-home-g99dad82d0_1920.jpg">
+                    </li>
+                    <li class="soumission_item">
+                        <img src="luxury-home-g99dad82d0_1920.jpg">
+                    </li>
+                    <li class="soumission_item">
+                        <img src="luxury-home-g99dad82d0_1920.jpg">
+                    </li>
+                </ul>
             </div>
         </div>
 
 
 
 
-        <div class="footer">
+        <div class="credit">
+            <ul class="credit_col_1">
+                <li>
+                    <a class="logo_img">
+                        <img src="logo.png"/>
+                    </a>
+                </li>
+                <li id="second_li">
+                    <p id="Book_your_place">Envoyer nous une soumission</p>
+                </li>
+                <li>
+                    <p id="Barber_credit">Pour toute question concercant nos services de gestion immobilière, nos logements à louer ou pour en savoir plus sur nos offres et services.</p>
+                    <a href="contact.html" class="Credit_Barber">Envoyer une soumission</a>
+                </li>
+                <li>
+                    <ul class="credit_logo">
+                        <li>
+                             <a target="_blank" href="https://fr-ca.facebook.com/Bosscut786/"><ion-icon name="logo-facebook"></ion-icon></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.google.com/search?q=bosscut+786&rlz=1C5CHFA_enCA866CA866&oq=bosscut+786&aqs=chrome..69i57j69i60l2.4108j0j7&sourceid=chrome&ie=UTF-8"><ion-icon name="logo-google"></ion-icon></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.instagram.com/bosscut_786/?hl=fr"><ion-icon name="logo-instagram"></ion-icon></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
 
+            <ul class="credit_col_2">
+                <li>
+                    <h1>Navigation</h1>
+                </li>
+                <li>
+                    <a href="index.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="team.html">À propos</a>
+                </li>
+                <li>
+                    <a href="">Nos services</a>
+                </li>
+                <li>
+                    <a href="contact.html">Nous joindre</a>
+                </li>
+            </ul>
+
+            <ul class="credit_col_3">
+                <li>
+                    <h1>Nos coordonnés</h1>
+                </li>
+                <li>
+                    (450)-775-6639
+                </li>
+                <li>
+                    gestion-eden.com
+                </li>
+                <li>
+                    gi.eden@outlook.com
+                </li>
+                <li>
+                    2975 Montée Saint-Hubert Qc Canada
+                </li>
+            </ul>
+        </div>
+        <div class="copyright">
+                <p>Copyright © 2022. Gestion Immobilière Eden reserved.</p>
         </div>
 
 
