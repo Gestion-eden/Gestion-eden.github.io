@@ -88,3 +88,30 @@ const observer3 = new IntersectionObserver(entries => {
 });
 
 observer3.observe(document.querySelector('.Soumission_email'));
+
+
+const observer4 = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const org_el_1 = entry.target.querySelector('#org_el_1');
+    const org_el_3 = entry.target.querySelector('#org_el_3');
+    const org_el_4 = entry.target.querySelector('#org_el_4');
+
+    if (entry.isIntersecting) {
+      console.log("yes");
+      org_el_1.classList.add('org_el_1_position');
+      org_el_3.classList.add('org_el_3_position');
+      org_el_4.classList.add('org_el_4_position');
+      /*soumission_item_7.classList.add('animate_perspective_and_rotate');*/
+      //console.log("yes");
+	  return; // if we added the class, exit the function
+    }
+    //console.log("no more");
+    // We're not intersecting, so remove the class!
+    org_el_1.classList.remove('org_el_1_position');
+    org_el_3.classList.remove('org_el_3_position');
+    org_el_4.classList.remove('org_el_4_position');
+    //soumission_item_7.classList.remove('animate_perspective_and_rotate');
+  });
+});
+
+observer4.observe(document.querySelector('.Organisation_container'));
