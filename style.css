@@ -203,20 +203,30 @@ body{
 
 .Keyword_container{
     color: black;
-    background: rgba(255, 255, 255, 0);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    /**backdrop-filter: blur(1.5px);**/
-    -webkit-backdrop-filter: blur(6.5px);
     /**border-right: 2px solid goldenrod;
     border-left: 2px solid goldenrod;
     border-bottom: 2px solid goldenrod;**/
     z-index: -9;
     text-align: center;
     font-size: 25px;
-    margin-top: 72%;
+    margin-top: 70%;
     /*margin-left: 10%;
     margin-right: 10%;*/
+}
+
+.Keyword_list{
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /**backdrop-filter: blur(1.5px);**/
+    -webkit-backdrop-filter: blur(6.5px);
+}
+
+.Keyword_title{
+    text-align: left;
+    color:rgb(23, 39, 62); ;
+    font-size: 4vw;
+    padding-bottom: 0;
 }
 
 
@@ -291,6 +301,10 @@ body{
 
 }
 
+.Org_grid a{
+    text-decoration: none;
+}
+
 #org_el_1{
     height: 200px;
     width: 200px;
@@ -299,6 +313,12 @@ body{
     grid-column-end: 3;
     border-radius: 25px;
     z-index: 1;
+}
+
+#org_el_1:hover{
+    box-shadow: grey 0px 0px 22px 4px;
+    cursor: pointer;
+
 }
 
 #org_el_2{
@@ -323,6 +343,11 @@ body{
     opacity: 0;
 }
 
+#org_el_3:hover{
+    box-shadow: mediumvioletred 0px 0px 22px 4px;
+    cursor: pointer;
+}
+
 #org_el_4{
     height: 200px;
     width: 200px;
@@ -332,6 +357,11 @@ body{
     border-radius: 25px;
     opacity: 0;
     z-index: 1;
+}
+
+#org_el_4:hover{
+    box-shadow: green 0px 0px 22px 4px;
+    cursor: pointer;
 }
 
 #org_el_1 h1{
@@ -1141,6 +1171,98 @@ body{
 #Member_list li:nth-child(3) img:hover {
   box-shadow: red 0px 0px 22px 4px;
 }*/
+
+/**Gestion**/
+.Latest_Merch_list{
+    list-style-type: none;
+    display:grid;
+    padding-right: 5%;
+    margin-left: 2%;
+    grid-row-gap: 5%;
+    margin-top: 50%;
+}
+
+.Latest_Merch_container{
+    text-align: center;
+    /*width: 30%;*/
+    margin-left: 5%;
+    color: black;
+    padding-top: 1%;
+    background: rgba( 248, 248, 248, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 255, 255, 255, 0.8 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transform: translateX(-400%);
+}
+
+.Latest_Merch_container_animate{
+    animation: Latest_Merch_from_left 3s forwards;
+}
+
+.Latest_Merch_list li:nth-child(1){
+    /*animation-delay: 1.5s;*/
+    grid-column-start: 0;
+    grid-column-end:1 ;
+    grid-row-start: 0;
+    grid-row-end: 1;
+}
+.Latest_Merch_list li:nth-child(2){
+    /*animation-delay: 1s;*/
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 0;
+    grid-row-end: 1;
+
+}
+.Latest_Merch_list li:nth-child(3){
+    /*animation-delay: 2s;*/
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    transform: translateX(-600%);
+
+}
+.Latest_Merch_list li:nth-child(4){
+    animation-delay: 2s;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.Latest_Merch_list li:nth-child(5){
+    animation-delay: 2s;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    transform: translateX(-500%);
+}
+
+@keyframes Latest_Merch_from_left {
+    0%{
+        transform: translateX(-500%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+
+}
+
+.Latest_Merch_container img{
+    height: 250px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    mix-blend-mode: multiply;
+    padding-bottom: 2%;
+}
+
+
+
 
 
 /**Animation**/
