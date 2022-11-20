@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Js-->
+    <script type="module"  src="Scroll.js"></script>
+    <!-- Static SCSS -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+     <div class="contact_background">
+         <nav class="navbar navbar-expand-md  mainNavbar" style="margin-top: 0; top: 2%;">
+          <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#main-navigation" aria-controls="navbarToggleExternalContent"
+                  aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main-navigation">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="team.html">À propos</a>
+                </li>
+                <li>
+                    <a class="navbar-brand">
+                        <img src="logo.png"/>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="dropbtn" onclick="myFunction()"> Nos Services
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content" id="myDropdown">
+                          <a href="gestion.html">Gestion immobilière</a>
+                          <a href="courtage.html">Courtage immobilière</a>
+                          <a href="renovation.html">Construction et rénovation</a>
+                        </div>
+                    </div>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="commerce.html">Commerces</a>
+                </li>-->
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Nous joindre</a>
+                </li>
+              </ul>
+          </div>
+        </nav>
+         <h1 id="contact_title">
+             Contactez-nous
+         </h1>
+     </div>
+
+
+    <div class="contact_info">
+        <div id="infos_left">
+            <div class="Email_Form">
+            <h1>Envoyer-nous un message</h1><br>
+            <p1>Notre équipe sera prête à vous aider (A modifier)</p1><br/><br/>
+                <form action="/contact"  method="POST">
+                    <input id="csrf_token" name="csrf_token" type="hidden" value="ImEzMWEyMmZmZTc4ZTRmY2QwM2JlNzc2ODE4MDcyN2E1NjQ1YjA1MDQi.Yqdp_w.owo2Vp3U1tktyk_MFoISTNK32K8">
+                    <label class="contact_form" id="l1">Nom complet<br> <input id="name_input" type="text" name="Name"/></label><br/><br/>
+                    <label class="contact_form" id="l2">Courriel<br> <input id="email_input" type="email" name="Email"/></label><br/><br/>
+                    <label class="contact_form" id="l3">Numéro de téléphone<br> <input id="tel_input" type="tel" name="Telephone"/></label><br/><br/>
+                    <label class="contact_form" id="l4">Sujet<br> <input id="subject_input" type="text" name="Name"/></label><br/><br/>
+                    <label class="contact_form" id="l5"> Message<br> <textarea id="message_input" name="Message" rows="4" cols="50" maxlength="1000"></textarea></label><br/><br/>
+                    <button id="contact_button"  onclick="sendData()" type="submit">Envoyer</button>
+                </form>
+            </div>
+            <table id="General_info">
+                <tr>
+                    <th style="width: 15%">Addresse:</th>
+                    <th style="font-weight: normal ">2975 Montée Saint-Hubert,Saint-Hubert,Qc,J3Y 4H6</th>
+                </tr>
+                <tr>
+                    <th>Téléphone:</th>
+                    <th style="font-weight: normal ">(450) 775-6639</th>
+                </tr>
+                    <th>Courriel:</th>
+                    <th style="font-weight: normal ">gi.eden@outlook.com</th>
+            </table>
+        </div>
+        <div id="infos_right">
+             <iframe id="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.4178922624424!2d-73.4251526488029!3d45.50166567899888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc90448e4fd7297%3A0xb4a8588cec0cf7ad!2s2975%20Mnt%20Saint-Hubert%2C%20Saint-Hubert%2C%20QC%20J3Y%204H6!5e0!3m2!1sfr!2sca!4v1656356808719!5m2!1sfr!2sca"
+                    width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <table id="schedule">
+                <caption>Nos heures d'ouverture</caption>
+                <tr>
+                    <th style="width: 50%"><p1>Lundi:</p1></th>
+                    <th style="font-weight: normal "><p1>07:00am – 10:00pm</p1></th>
+                </tr>
+                <tr>
+                    <th style="width: 50%"><p1>Mardi:</p1></th>
+                    <th style="font-weight: normal "><p1>07:00am – 10:00pm</p1></th>
+                </tr>
+                <tr>
+                    <th style="width: 50%"><p1>Mercredi:</p1></th>
+                    <th style="font-weight: normal "><p1>07:00am – 10:00pm</p1></th>
+                </tr>
+                <tr>
+                    <th style="width: 50%"><p1>Jeudi:</p1></th>
+                    <th style="font-weight: normal "><p1>07:00am – 10:00pm</p1></th>
+                </tr>
+                <tr>
+                    <th style="width: 50%"><p1>Vendredi:</p1></th>
+                    <th style="font-weight: normal "><p1>07:00am – 10:00pm</p1></th>
+                </tr>
+                <tr>
+                    <th style="width: 50%"><p1>Samedi:</p1></th>
+                    <th style="font-weight: normal "><p1>07:00am – 10:00pm</p1></th>
+                </tr>
+                <tr>
+                    <th style="width: 50%"><p1>Dimanche:  </p1></th>
+                    <th style="font-weight: normal "><p1>02:00 pm – 10:00 pm</p1></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+    <!-- Ionic-Icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script type="text/javascript"  src="Carousel.js"></script>
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.add("show");
+          console.log("fcuk");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+          if (!e.target.matches('.dropbtn')) {
+          var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
+        }
+    </script>
+
+
+</body>
+</html>
