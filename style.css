@@ -1,4 +1,7 @@
 
+html{
+}
+
 body{
     background: white;
 }
@@ -7,7 +10,7 @@ body{
 
 .mainNavbar{
     z-index: 9;
-    margin-top: 5%;
+    margin-top: 3%;
     animation: fade 4s forwards;
 }
 
@@ -22,6 +25,10 @@ body{
 
 .navbar-brand img{
     height: 225px;
+}
+
+.navbar-brand{
+    margin-bottom: 5%;
 }
 
 .mainNavbar a{
@@ -170,7 +177,7 @@ body{
 
 
 .title{
-    color: white;
+    color: whitesmoke;
     font-size: 8vw;
     margin-left: 15%;
     top: 45%;
@@ -185,6 +192,10 @@ body{
     font-size: 50px;
     animation: 4s fade forwards;
     color: goldenrod;
+}
+
+.Maintitle_measure{
+    margin-top: 50%;
 }
 
 
@@ -202,25 +213,9 @@ body{
 }
 
 .Keyword_container{
-    color: black;
-    /**border-right: 2px solid goldenrod;
-    border-left: 2px solid goldenrod;
-    border-bottom: 2px solid goldenrod;**/
-    z-index: -9;
-    text-align: center;
-    font-size: 25px;
-    margin-top: 65%;
-    /*margin-left: 10%;
-    margin-right: 10%;*/
+    margin-top:65% ;
 }
 
-.Keyword_list{
-    background: rgba(255, 255, 255, 0);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    /**backdrop-filter: blur(1.5px);**/
-    -webkit-backdrop-filter: blur(6.5px);
-}
 
 .Keyword_title{
     text-align: left;
@@ -229,6 +224,69 @@ body{
     padding-bottom: 0;
 }
 
+.keyword_content{
+    display: flex;
+    margin-top: 5%;
+}
+
+.keyword_list{
+    display: grid;
+    list-style-type: none;
+    column-gap: 2%;
+}
+
+.keyword_list li{
+    font-size: 20px;
+    text-align: center;
+}
+
+.keyword_list li img{
+    width: 300px;
+    height: 300px;
+    margin-top: 10%;
+}
+
+.keyword_list li h1{
+    text-align: center;
+    padding-bottom: 4%;
+    font-size: 30px;
+}
+
+
+.keyword_list li:nth-child(1){
+    grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    border-right: 1px solid rgb(23, 39, 62);;
+    padding-right: 1%;
+    opacity: 0;
+    animation-delay: 0.25s;
+}
+
+.keyword_list li:nth-child(2){
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    border-right: 1px solid rgb(23, 39, 62);;
+    padding-right: 1%;
+    opacity: 0;
+    animation-delay: 0.5s;
+
+}
+.keyword_list li:nth-child(3){
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    opacity: 0;
+    animation-delay: 0.75s;
+}
+
+.Keyword_element_animate{
+    animation: fade 1s forwards;
+}
 
 @keyframes MainTitle  {
     0%{
@@ -246,17 +304,28 @@ body{
 }
 
 .MainTitle{
-    animation: MainTitle 2s forwards;
+    animation: MainTitle 0.5s forwards;
     position: absolute;
     top:110%;
 }
 
 
 
+#circularcursor {
+  background-color: transparent;
+  border:1px solid black;
+  height:20px;
+  width:20px;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  position: absolute;
+  z-index: 1;
+}
 
 
 .Organisation_container{
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .Org_title{
@@ -265,46 +334,58 @@ body{
     white-space: nowrap; /* Keeps the content on a single line */
     color: rgb(23, 39, 62);
     margin-left: 2%;
-    border-right: .15em solid rgb(23, 39, 62);
     /*animation:
-    typing 3.5s steps(40,end),
-    blink-caret .75s step-end infinite;*/
     /*background-color: blue;*/
     width: max-content;
 }
 
-.typing{
-    animation:
-    typing 3.5s steps(50,end),
-    blink-caret .75s step-end infinite;
-}
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 35% }
-}
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: rgb(23, 39, 62); }
-}
 
-.Org_grid{
+/**.Org_grid{
     margin-left: 15%;
     width: 70%;
-    display: grid;
-    margin-top: 5%;
+
     row-gap: 50px;
-    background-image: url("canvas_background.gif");
+    /**background-image: url("canvas_background.gif");
     background-size: 100% 100%;
 
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}**/
+
+.parallax {
+  /* The image used */
+  background-image: url("pascal-bernardon-d4lFeKCfBV4-unsplash.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.Org_grid a{
-    text-decoration: none;
+.parallax_2 {
+  /* The image used */
+  background-image: url("victor-malyushev-TuKjDq44tQw-unsplash.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+
+/**
 #org_el_1{
     height: 200px;
     width: 200px;
@@ -390,7 +471,7 @@ body{
 }
 
 /**Each elements goes to their own position that are definied with keyframes**/
-
+/**
 .org_el_1_position{
     animation: org_el_1_animate_1 2s linear;
 
@@ -439,73 +520,23 @@ body{
         opacity: 1;
     }
 }
+**/
 
 
 
 
 
-.Keyword_list{
-    list-style-type: none;
-    margin-top: 5%;
-    display: flex;
-    padding-right: 5%;
-    margin-left: 2%;
-}
 
-.Keyword_element{
-    text-align: center;
-    width: 30%;
-    margin-left: 5%;
-    color: black;
-    padding-top: 1%;
-    background: rgba( 248, 248, 248, 0.05 );
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur( 0px );
-    -webkit-backdrop-filter: blur( 0px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    transform: translateX(-400%);
-}
-
-.Keyword_element_animate{
-    animation: Keyword_from_left 4s forwards;
-}
-
-.Keyword_list li:nth-child(1){
-    animation-delay: 4s;
-}
-.Keyword_list li:nth-child(2){
-    animation-delay: 2s;
-}
-
-@keyframes Keyword_from_left {
-    0%{
-        transform: translateX(-400%);
-    }
-    100%{
-        transform: translateX(0);
-    }
-
-}
-
-.Keyword_element img{
-    height: 250px;
-    width: 200px;
-    display: block;
-    margin: 0 auto;
-    mix-blend-mode: multiply;
-    padding-bottom: 2%;
-}
 
 .See_more_container{
     margin-top: 5%;
     padding-bottom: 5%;/*to remove*/
+    margin-right: 2%;
 }
 
 
 .See_more{
-    margin-left: 36%;
-    font-size: 30px;
+    font-size: 18px;
     text-decoration: none;
     background-color: white;
     color: goldenrod;
@@ -573,6 +604,7 @@ body{
 .Soumission_email{
     display: flex;
     padding-bottom: 5%;
+    background-color: whitesmoke;
 }
 
 .Soumission_description{
@@ -618,7 +650,7 @@ body{
     grid-row-end:1 ;
     grid-column-start: 1;
     grid-column-end: 2;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
     opacity: 0;
 }
 .soumission_item:nth-child(3){
@@ -626,7 +658,7 @@ body{
     grid-row-end:1 ;
     grid-column-start: 2;
     grid-column-end: 3;
-    animation-delay: 2s;
+    animation-delay: 1s;
     opacity: 0;
 }
 .soumission_item:nth-child(4){
@@ -634,7 +666,7 @@ body{
     grid-row-end:2;
     grid-column-start: 0;
     grid-column-end: 1;
-    animation-delay: 3s;
+    animation-delay: 1.5s;
     opacity: 0;
 }
 .soumission_item:nth-child(5){
@@ -642,7 +674,7 @@ body{
     grid-row-end:2;
     grid-column-start: 1;
     grid-column-end: 2;
-    animation-delay: 4s;
+    animation-delay: 2s;
     opacity: 0;
 
 }
@@ -651,12 +683,12 @@ body{
     grid-row-end:2;
     grid-column-start: 2;
     grid-column-end: 3;
-    animation-delay: 5s;
+    animation-delay: 2.5s;
     opacity: 0;
 }
 
 .animate_perspective_and_rotate{
-    animation: 4s perspective_and_rotate forwards ;
+    animation: 1s perspective_and_rotate forwards ;
 }
 
 @keyframes perspective_and_rotate {
@@ -691,7 +723,8 @@ body{
   padding-left: 5%;
   padding-right: 5%;
   font-family: "Playfair Display", serif;
-  display: flex; }
+  display: flex;
+}
 
 .logo_img img{
     height: 175px;
@@ -709,6 +742,7 @@ body{
     margin-top: 10%;
     float: right;
     list-style-type: none;
+    font-size: 25px;
 }
 
 .credit_logo {
@@ -718,11 +752,11 @@ body{
 
 #Book_your_place {
     border-bottom: 1px solid grey;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 #Barber_credit {
-    font-size: 18px;
+    font-size: 25px;
     color: #9c9c9c;
 }
 
@@ -741,6 +775,7 @@ body{
     float: right;
     list-style-type: none;
     margin-left: 5%;
+    font-size: 25px;
 }
 
 .credit_col_3 h1, .credit_col_2 h1 {
@@ -878,7 +913,7 @@ body{
     /**background-image: url("contact_us.png");**/
 
     /**background-size:100% 100%;**/
-    background-color: lightskyblue;
+    background-color: gainsboro;
 }
 
 
@@ -896,6 +931,7 @@ body{
     padding-top: 2%;
     display: flex;
     background-color: white;
+    padding-bottom: 5%;
 
 }
 
@@ -1002,7 +1038,7 @@ body{
 /**A propos**/
 
 .team_background{
-    background-image: url("team_pic.png");
+    background-image: url("slide_2.jpg");
     height: 600px;
     background-size:100% 100%;
     position: absolute;
@@ -1011,10 +1047,10 @@ body{
 }
 
 #team_title{
-    font-size: 60px;
+    font-size: 7vw;
     color: white;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 25%;
 }
 
 
@@ -1028,7 +1064,9 @@ body{
 
 #about_nav{
     width: 100%;
-    margin-top: 32%;
+    margin-top: 25%;
+    background: none;
+    color: white;
 }
 
 #team_side_nav{
@@ -1061,8 +1099,8 @@ body{
 }
 
 #about_content{
-    padding-left: 20%;
-    padding-right: 10%;
+    /*padding-left: 20%;
+    padding-right: 10%;*/
     margin-top: 5%;
     font-size: 25px;
 }
@@ -1235,39 +1273,39 @@ body{
 
 
 .Gestion_box_list li:nth-child(1) h1{
-    animation-delay: 3s;
+    animation-delay: 0.5s;
 }
 .Gestion_box_list li:nth-child(2) h1{
-    animation-delay: 3.5s;
+    animation-delay: 0.5s;
 }
 .Gestion_box_list li:nth-child(3) h1{
-    animation-delay: 4s;
+    animation-delay: 0.5s;
 }
 .Gestion_box_list li:nth-child(4) h1{
-    animation-delay: 4.5s;
+    animation-delay: 0.5s;
 }
 .Gestion_box_list li:nth-child(5) h1{
-    animation-delay: 5s;
+    animation-delay: 0.5s;
 }
 
 .Gestion_box_list li:nth-child(1) p2{
-    animation-delay: 3s;
+    animation-delay: 0.5s;
 }
 
 .Gestion_box_list li:nth-child(2) p2{
-    animation-delay: 3.5s;
+    animation-delay: 0.75s;
 }
 
 .Gestion_box_list li:nth-child(3) p2{
-    animation-delay: 4s;
+    animation-delay: 1s;
 }
 
 .Gestion_box_list li:nth-child(4) p2{
-    animation-delay: 4.5s;
+    animation-delay: 1.25s;
 }
 
 .Gestion_box_list li:nth-child(5) p2{
-    animation-delay: 5s;
+    animation-delay: 1.5s;
 }
 
 
@@ -1287,7 +1325,7 @@ body{
 
 }
 .Gestion_box_list li:nth-child(3){
-    animation-delay: 1s;
+    animation-delay: 0.5s;
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 0;
@@ -1295,7 +1333,7 @@ body{
 
 }
 .Gestion_box_list li:nth-child(4){
-    animation-delay: 1.5s;
+    animation-delay: 0.5s;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -1303,7 +1341,7 @@ body{
 }
 
 .Gestion_box_list li:nth-child(5){
-    animation-delay: 1.5s;
+    animation-delay: 0.5s;
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
@@ -1312,7 +1350,7 @@ body{
 }
 
 .border-trace{
-    animation: border-tracing 3s forwards;
+    animation: border-tracing 2s forwards;
 }
 
 
@@ -1442,7 +1480,7 @@ body{
 }
 
 .fade{
-    animation: fade forwards 4s;
+    animation: fade forwards 2s;
 }
 
 @keyframes Contact_title_animate {

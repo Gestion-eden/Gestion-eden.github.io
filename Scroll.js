@@ -4,9 +4,9 @@ const mainNav=document.querySelector('.mainNavbar');
 const observer1 = new IntersectionObserver(entries => {
   entries.forEach(entry => {
 
-    const Keyword_element_1 = entry.target.querySelector('.Keyword_element:nth-child(1)');
-    const Keyword_element_2 = entry.target.querySelector('.Keyword_element:nth-child(2)');
-    const Keyword_element_3 = entry.target.querySelector('.Keyword_element:nth-child(3)');
+    const Keyword_element_1 = entry.target.querySelector('.keyword_list li:nth-child(1)');
+    const Keyword_element_2 = entry.target.querySelector('.keyword_list li:nth-child(2)');
+    const Keyword_element_3 = entry.target.querySelector('.keyword_list li:nth-child(3)');
 
     if (entry.isIntersecting) {
       console.log("yes");
@@ -14,7 +14,7 @@ const observer1 = new IntersectionObserver(entries => {
       Keyword_element_1.classList.add('Keyword_element_animate');
       Keyword_element_2.classList.add('Keyword_element_animate');
       Keyword_element_3.classList.add('Keyword_element_animate');
-      //console.log("yes");
+      console.log("yes");
 
 	  return; // if we added the class, exit the function
     }
@@ -27,7 +27,7 @@ const observer1 = new IntersectionObserver(entries => {
   });
 });
 
-observer1.observe(document.querySelector('.Keyword_list'));
+observer1.observe(document.querySelector('.Keyword_container'));
 
 
 const observer2 = new IntersectionObserver(entries => {
@@ -36,14 +36,14 @@ const observer2 = new IntersectionObserver(entries => {
 
     if (entry.isIntersecting) {
       console.log("yes");
-      Keyword_title.classList.add('typing');
+      //Keyword_title.classList.add('typing');
       //mainNav.classList.add('sticky');
       //console.log("yes");
 	  return; // if we added the class, exit the function
     }
     //console.log("no more");
     // We're not intersecting, so remove the class!
-    Keyword_title.classList.remove('typing');
+    //Keyword_title.classList.remove('typing');
     //mainNav.classList.remove('sticky');
   });
 });
@@ -90,7 +90,7 @@ const observer3 = new IntersectionObserver(entries => {
 observer3.observe(document.querySelector('.Soumission_email'));
 
 
-const observer4 = new IntersectionObserver(entries => {
+/**const observer4 = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     const org_el_1 = entry.target.querySelector('#org_el_1');
     const org_el_3 = entry.target.querySelector('#org_el_3');
@@ -101,7 +101,7 @@ const observer4 = new IntersectionObserver(entries => {
       org_el_1.classList.add('org_el_1_position');
       org_el_3.classList.add('org_el_3_position');
       org_el_4.classList.add('org_el_4_position');
-      /*soumission_item_7.classList.add('animate_perspective_and_rotate');*/
+      /*soumission_item_7.classList.add('animate_perspective_and_rotate');
       //console.log("yes");
 	  return; // if we added the class, exit the function
     }
@@ -114,4 +114,20 @@ const observer4 = new IntersectionObserver(entries => {
   });
 });
 
-observer4.observe(document.querySelector('.Organisation_container'));
+//observer4.observe(document.querySelector('.Organisation_container'));**/
+
+
+document.body.onmousemove = function(e) {
+  document.documentElement.style.setProperty (
+    '--x', (
+      e.clientX+window.scrollX
+    )
+    + 'px'
+  );
+  document.documentElement.style.setProperty (
+    '--y', (
+      e.clientY+window.scrollY
+    )
+    + 'px'
+  );
+}
