@@ -44,4 +44,4 @@ const observer2 = new IntersectionObserver(entries => {
   });
 });
 
-observer2.observe(document.querySelector('#Équipe'));
+observer2.observe(document.querySelector('#Equipe'));

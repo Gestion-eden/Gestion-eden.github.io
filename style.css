@@ -370,6 +370,50 @@ body{
   background-size: cover;
 }
 
+.parallax_4 {
+  /* The image used */
+  background-image: url("ann-wallace-biepNX5n7r4-unsplash.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.parallax_5 {
+  /* The image used */
+  background-image: url("digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.parallax_3 {
+  /* The image used */
+  background-image: url("andrew-welch-kwXby58kRSo-unsplash.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .parallax_2 {
   /* The image used */
   background-image: url("victor-malyushev-TuKjDq44tQw-unsplash.jpg");
@@ -674,7 +718,7 @@ body{
     grid-row-end:2;
     grid-column-start: 1;
     grid-column-end: 2;
-    animation-delay: 2s;
+    animation-delay: 2.2s;
     opacity: 0;
 
 }
@@ -1095,16 +1139,16 @@ body{
 
 #about_nav{
     width: 100%;
-    margin-top: 25%;
+    margin-top: 10%;
     background: none;
-    color: white;
+    color:rgb(23, 39, 62); ;
 }
 
 #team_side_nav{
     list-style-type: none;
     display: flex;
     padding-left: 0;
-    margin-left: 15%;
+    margin-left: 25%;
 }
 
 #team_side_nav li{
@@ -1129,10 +1173,14 @@ body{
     color: goldenrod;
 }
 
+#Equipe{
+    margin-top: 30%;
+    margin-left: 15%;
+}
+
 #about_content{
     /*padding-left: 20%;
     padding-right: 10%;*/
-    margin-top: 5%;
     font-size: 25px;
 }
 
@@ -1144,20 +1192,37 @@ body{
 
 #Mission{
     padding-bottom: 5%;
+    text-align: center;
 }
+
+#Mission h1{
+    text-align: center;
+}
+
 
 #Objectifs {
     padding-bottom: 5%;
 }
 
+#Objectifs h1{
+    text-align: center;
+}
+
+#Objectifs ul{
+    padding-left: 15%;
+}
+
+
 #Exploits{
     padding-bottom: 5%;
+    text-align: center;
 }
 
 #Member_list {
     display: flex;
     list-style-type: none;
     padding-left: 0;
+    margin-top: 5%;
 }
 
 #Member_list li {
@@ -1185,12 +1250,12 @@ body{
 
 #Member_list li:nth-child(2) {
     /*animation: fade forwards 4s;*/
-    animation-delay: 1s;
+    animation-delay: 0.5s;
 }
 
 #Member_list li:nth-child(3) {
     /*animation: fade forwards 4s;*/
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 
 
@@ -1203,10 +1268,19 @@ body{
 
 @media screen and (max-width: 1000px) {
     .team_background{
-        height: 400px;
+        height: 600px;
     }
     #about_nav{
+        margin-top: 10%;
+    }
+
+    #team_title{
+        margin-top: 35%;
+    }
+
+    #Equipe{
         margin-top: 40%;
+        margin-left: 5%;
     }
 
     #team_side_nav{
@@ -1214,7 +1288,6 @@ body{
     }
 
     #about_content{
-        padding-left: 2%;
     }
 
     #Member_list {
@@ -1239,6 +1312,11 @@ body{
     #Member_list li img {
         width: 250px;
         height: 400px;
+    }
+
+    #Exploits{
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
