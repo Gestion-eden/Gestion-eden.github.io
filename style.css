@@ -1622,6 +1622,19 @@ button:hover{
 
 }
 
+@media screen and (max-width: 1000px) {
+    .inner-cursor{
+        display: none;
+    }
+    .outer-cursor{
+        display: none;
+    }
+
+    body{
+        cursor: pointer;
+    }
+}
+
 
 
 
