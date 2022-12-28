@@ -4,6 +4,12 @@ html{
 
 body{
     background: white;
+    cursor: none;
+
+}
+
+button:hover{
+    cursor: none;
 }
 
 
@@ -25,6 +31,7 @@ body{
 
 .navbar-brand img{
     height: 225px;
+    mix-blend-mode: difference;
 }
 
 .navbar-brand{
@@ -34,6 +41,7 @@ body{
 .mainNavbar a{
     color:white;
     font-size: 25px;
+    cursor: none;
 }
 
 .navbar-nav > li{
@@ -81,9 +89,10 @@ body{
     float: left;
 }
 
+
 .dropbtn {
   cursor: pointer;
-  font-size: 25px;
+  font-size: 23px;
   border: none;
   outline: none;
   color: white;
@@ -123,6 +132,7 @@ body{
 .dropdown-content a:hover {
   background-color: black;
   color: white;
+  cursor: pointer;
 }
 
 .show {
@@ -173,6 +183,15 @@ body{
 
 .carousel-item{
     z-index: -2;
+}
+
+
+.carousel-control-next:hover{
+    cursor: none;
+}
+
+.carousel-control-prev:hover{
+    cursor: none;
 }
 
 
@@ -1565,6 +1584,42 @@ body{
     .Gestion_box_list li:nth-child(5){
         margin-top: 5%;
     }
+}
+
+/**Cursor**/
+
+.inner-cursor{
+    position: fixed;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width 0.5s, height 0.5s;
+
+}
+
+.inner-cursor.grow{
+    width: 40px;
+    height: 40px;
+    transition: width 0.5s, height 0.5s;
+}
+
+.outer-cursor{
+    position: fixed;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    transform:  translate(-50%, -50%);
+    border:  1px solid #fff;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transition: 0.0s;
+    border-radius: 50%;
+
 }
 
 
